@@ -1,31 +1,38 @@
 <ng-container *ngIf="!isDataLoading">
-    <div class="main-container">
-        <div class="custom-row">
-            <div class="custom-column" *ngFor="let launchProgramObj of launchProgram">
-                <div class="image-box">
-                    <img class="mission-img" alt="Mission Img" [src]="launchProgramObj.links.mission_patch" />
-                </div>
-                <div class="custom-card">
-                    <h3>{{launchProgramObj.mission_name}} #{{launchProgramObj.flight_number}}</h3>
-                    <p><label class="mission-label">Mission Ids:</label>{{launchProgramObj.mission_id}}</p>
-                    <p><label class="mission-label">Launch Year:</label>{{launchProgramObj.launch_year}}</p>
-                    <p><label class="mission-label">Successful Launch:</label>{{launchProgramObj.launch_success}}</p>
-                    <p><label class="mission-label">Successful Landing:</label>{{launchProgramObj.tbd}}</p>
+    <ng-container *ngIf="launchProgram?.length > 0">
+        <div class="main-container">
+            <div class="custom-row">
+                <div class="custom-column" *ngFor="let launchProgramObj of launchProgram">
+                    <div class="image-box">
+                        <img class="mission-img" alt="Mission Img" [src]="launchProgramObj.links.mission_patch" />
+                    </div>
+                    <div class="custom-card">
+                        <h3>{{launchProgramObj.mission_name}} #{{launchProgramObj.flight_number}}</h3>
+                        <p><label class="mission-label">Mission Ids:</label>{{launchProgramObj.mission_id}}</p>
+                        <p><label class="mission-label">Launch Year:</label>{{launchProgramObj.launch_year}}</p>
+                        <p><label class="mission-label">Successful Launch:</label>{{launchProgramObj.launch_success}}
+                        </p>
+                        <p><label class="mission-label">Successful Landing:</label>{{launchProgramObj.tbd}}</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </ng-container>
 
     <ng-container *ngIf="launchProgram?.length === 0">
-        <div class="main-container center-align">
-            No Record Found!
+        <div class="main-container">
+            <div class="center-align">
+                No Record Found!
+            </div>
         </div>
     </ng-container>
 </ng-container>
 
 <ng-container *ngIf="isDataLoading">
-    <div class="main-container center-align">
-        Data is Loading!
+    <div class="main-container">
+        <div class="center-align">
+            Data is Loading!
+        </div>
     </div>
     <img [src]="'./../../assets/loading.gif'" alt="loading img" class="loading-icon">
 </ng-container>
