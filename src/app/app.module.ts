@@ -5,10 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LandingPageComponent } from './component/landing-page/landing-page.component';
+import { AllLaunchProgramComponent } from './component/all-launch-program/all-launch-program.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LandingPageComponent,
+    AllLaunchProgramComponent
   ],
   imports: [
     BrowserModule,

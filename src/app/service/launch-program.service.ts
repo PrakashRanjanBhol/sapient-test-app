@@ -12,8 +12,14 @@ export class LaunchProgramService {
 
   constructor(private http: HttpClient) { }
 
-  getLaunchProgram(): Observable<any> {
-    return this.http.get(endpoint).pipe(
+  getLaunchProgram(queryParam): Observable<any> {
+    console.log(queryParam);
+
+    const requestedLaunch = (queryParam.launch === '1' || queryParam.launch === '2') ? `&lauch_success=${queryParam.launch === '1' ? 'true' : 'false'}` : '';
+    const requestedLanding = (queryParam.landing === '1' || queryParam.landing === '2') ?
+      `&land_success=${queryParam.landing === '1' ? 'true' : 'false'}` : '';
+    const requestedYear = queryParam.year === '0' ? '' : `&launch_year=${queryParam.year}`;
+    return this.http.get(`${endpoint}${requestedLaunch}${requestedLanding}${requestedYear}`).pipe(
       map(this.extractData),
       catchError(this.handleError)
     );
@@ -30,7 +36,7 @@ export class LaunchProgramService {
     } else {
       console.error(
         `Backend returned code ${error.status}, ` +
-        `body was: ${error.error}`);
+        `body was: ${error.error} `);
     }
     return throwError(
       'Something bad happened; please try again later.');
