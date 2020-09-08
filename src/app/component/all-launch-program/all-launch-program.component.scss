@@ -70,7 +70,7 @@
 .loading-icon {
   position: fixed;
   left: 20%;
-  top: 7%;
+  top: 4%;
 }
 
 .disable-container {
@@ -80,7 +80,7 @@
 
 .center-align {
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   font-size: 24px;
 }
@@ -93,6 +93,17 @@
 
   .custom-column {
     width: 100%;
+  }
+
+  .center-align {
+    position: absolute;
+    top: 90%;
+    left: 22%;
+  }
+  .loading-icon {
+    position: fixed;
+    left: -62%;
+    top: 4%;
   }
 }
 
