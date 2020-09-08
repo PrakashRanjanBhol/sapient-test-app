@@ -33,10 +33,4 @@ export class AllLaunchProgramComponent implements OnInit {
       this.isDataLoading = false;
     });
   }
-
-  filterLaunchProgram(filterType, filterVal) {
-    // if (filterType == 'Y') {
-
-    // }
-  }
 }
