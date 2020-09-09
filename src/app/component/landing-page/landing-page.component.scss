@@ -87,11 +87,14 @@
   outline: 0 !important;
 }
 
-
 @media (max-width: 700px) {
   .left-container,
   .main-container {
     width: 100%;
+  }
+
+  .year-by-filter {
+    width: 60%;
   }
 }
 
@@ -99,5 +102,9 @@
   .left-container,
   .main-container {
     width: 100%;
+  }
+
+  .year-by-filter {
+    width: 40%;
   }
 }
