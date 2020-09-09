@@ -14,13 +14,6 @@
   width: 80%;
 }
 
-@media (max-width: 600px) {
-  .left-container,
-  .main-container {
-    width: 100%;
-  }
-}
-
 .custom-column {
   width: 24%;
   float: left;
@@ -92,4 +85,19 @@
 
 .custom-btn:focus {
   outline: 0 !important;
+}
+
+
+@media (max-width: 700px) {
+  .left-container,
+  .main-container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1024px) {
+  .left-container,
+  .main-container {
+    width: 100%;
+  }
 }
