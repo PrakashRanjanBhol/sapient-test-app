@@ -15,7 +15,7 @@ export class LaunchProgramService {
   getLaunchProgram(queryParam): Observable<any> {
     console.log(queryParam);
 
-    const requestedLaunch = (queryParam.launch === '1' || queryParam.launch === '2') ? `&lauch_success=${queryParam.launch === '1' ? 'true' : 'false'}` : '';
+    const requestedLaunch = (queryParam.launch === '1' || queryParam.launch === '2') ? `&launch_success=${queryParam.launch === '1' ? 'true' : 'false'}` : '';
     const requestedLanding = (queryParam.landing === '1' || queryParam.landing === '2') ?
       `&land_success=${queryParam.landing === '1' ? 'true' : 'false'}` : '';
     const requestedYear = queryParam.year === '0' ? '' : `&launch_year=${queryParam.year}`;

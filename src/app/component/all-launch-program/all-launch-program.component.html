@@ -12,7 +12,7 @@
                         <p><label class="mission-label">Launch Year:</label>{{launchProgramObj.launch_year}}</p>
                         <p><label class="mission-label">Successful Launch:</label>{{launchProgramObj.launch_success}}
                         </p>
-                        <p><label class="mission-label">Successful Landing:</label>{{launchProgramObj.tbd}}</p>
+                        <p><label class="mission-label">Successful Landing:</label>{{launchProgramObj?.rocket?.first_stage?.cores[0].land_success}}</p>
                     </div>
                 </div>
             </div>
