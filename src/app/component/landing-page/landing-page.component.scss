@@ -94,7 +94,7 @@
   }
 
   .year-by-filter {
-    width: 60%;
+    width: 40%;
   }
 }
 
@@ -105,10 +105,16 @@
   }
 
   .year-by-filter {
-    width: 40%;
+    width: 24%;
   }
 }
 
-.mar0{
+@media (min-width: 700px) and (max-width: 1235px) {
+  .year-by-filter {
+    padding: 0px !important;
+  }
+}
+
+.mar0 {
   margin: 0px;
 }
